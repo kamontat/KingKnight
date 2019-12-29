@@ -1,0 +1,29 @@
+{
+  "name": "@kk/server",
+  "version": "0.1.0",
+  "description": "Server class for backend",
+  "keywords": [
+    "backend",
+    "server"
+  ],
+  "author": "Kamontat Chantrachirathumrong <developer@kamontat.net>",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "bin": {
+    "logger": "/usr/local/bin"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "compile": "tsc",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "devDependencies": {
+    "typescript": "3.7.4"
+  }
+}
