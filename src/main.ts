@@ -1,4 +1,6 @@
 import { app, BrowserWindow } from "electron";
+// import express from "express";
+
 import Hapi from "@hapi/hapi";
 
 declare let MAIN_WINDOW_WEBPACK_ENTRY: string;
@@ -9,9 +11,13 @@ if (require("electron-squirrel-startup")) {
   app.quit();
 }
 
+// const server = express();
+// server.get("/", (_req, res) => res.send("hello, world"));
+// server.listen(12345, () => console.log("start server"));
+
 const server = new Hapi.Server({
-  port: 12345,
   host: "localhost",
+  port: 12345,
 });
 
 server.start();

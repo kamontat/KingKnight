@@ -1,17 +1,22 @@
-const plugins = require("./webpack.plugins")
+const plugins = require("./webpack.plugins");
+const nodeExternals = require('webpack-node-externals');
+const pjson = require("./package.json");
 
 module.exports = {
   /**
    * This is the main entry point for your application, it's the first file
    * that runs in the main process.
    */
-  entry: './src/main.ts',
+  entry: "./src/main.ts",
   // Put your normal webpack config below here
   module: {
-    rules: require('./webpack.rules'),
+    rules: require("./webpack.rules"),
   },
   plugins: plugins,
   resolve: {
-    extensions: ['.js', '.ts', '.jsx', '.tsx', '.css']
+    extensions: [".js", ".ts", ".jsx", ".tsx", ".css"],
   },
+  externals: [
+    nodeExternals(),
+  ],
 };
