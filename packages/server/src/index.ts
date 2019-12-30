@@ -1,5 +1,8 @@
+import logger from "@kk/logger";
+
 export default class {
   constructor() {
-    console.log("start new object");
+    const log = new logger();
+    console.log(log.toString());
   }
 }

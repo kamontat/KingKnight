@@ -56,6 +56,12 @@
     "typescript": "3.7.4",
     "webpack-node-externals": "1.7.2"
   },
+  "workspaces": [
+    "packages/*"
+  ],
+  "resolutions": {
+    "@types/react": "16.9.17"
+  },
   "config": {
     "forge": {
       "packagerConfig": {},

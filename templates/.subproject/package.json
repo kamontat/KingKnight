@@ -1,10 +1,9 @@
 {
-  "name": "@kk/logger",
+  "name": "@kk/<name>",
   "version": "0.1.0",
-  "description": "Logger management in this project",
+  "description": "",
   "keywords": [
-    "backend",
-    "utils"
+    "backend|frontend"
   ],
   "author": "Kamontat Chantrachirathumrong <developer@kamontat.net>",
   "license": "MIT",
