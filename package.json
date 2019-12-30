@@ -54,6 +54,7 @@
     "style-loader": "1.1.2",
     "ts-loader": "6.2.1",
     "typescript": "3.7.4",
+    "webpack-merge": "4.2.2",
     "webpack-node-externals": "1.7.2"
   },
   "workspaces": [
@@ -91,9 +92,9 @@
         [
           "@electron-forge/plugin-webpack",
           {
-            "mainConfig": "./webpack.main.config.js",
+            "mainConfig": "./configs/webpack/webpack.config.main.js",
             "renderer": {
-              "config": "./webpack.renderer.config.js",
+              "config": "./configs/webpack/webpack.config.renderer.js",
               "entryPoints": [
                 {
                   "html": "./src/frontend/index.html",
