@@ -28,5 +28,10 @@
   },
   "resolutions": {
     "@types/react": "16.9.17"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
   }
 }
