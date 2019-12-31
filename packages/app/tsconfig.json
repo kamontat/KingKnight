@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "include": ["src", "**/*.json"],
+  "exclude": [".webpack", "node_modules", "**/*.spec.ts"],
+  "compilerOptions": {
+    "outDir": ".webpack",
+    "rootDir": ".",
+    "baseUrl": "."
+  }
+}

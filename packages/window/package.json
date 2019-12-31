@@ -1,10 +1,11 @@
 {
-  "name": "@kk/logger",
+  "name": "@kk/window",
   "version": "0.1.0",
-  "description": "Logger management in this project",
+  "description": "window management for electron",
   "keywords": [
-    "backend",
-    "utils"
+    "frontend",
+    "ui",
+    "management"
   ],
   "author": "Kamontat Chantrachirathumrong <developer@kamontat.net>",
   "license": "MIT",
@@ -14,7 +15,7 @@
     "clean": "rm -rf lib"
   },
   "dependencies": {
-    "winston": "3.2.1"
+    "@kk/logger": "0.1.0"
   },
   "devDependencies": {
     "typescript": "3.7.4"

@@ -1,0 +1,104 @@
+{
+  "name": "@kk/app",
+  "productName": "king knight",
+  "private": true,
+  "version": "1.0.0-alpha.1",
+  "description": "My Electron application description",
+  "main": ".webpack/main",
+  "scripts": {
+    "start-app": "electron-forge start",
+    "pack-app": "electron-forge package",
+    "make-app": "electron-forge make",
+    "publish-app": "electron-forge publish"
+  },
+  "author": {
+    "name": "Kamontat Chantrachirathumrong",
+    "email": "developer@kamontat.net"
+  },
+  "dependencies": {
+    "@hapi/hapi": "18.4.0",
+    "@hapi/joi": "15.1.1",
+    "@kk/logger": "0.1.0",
+    "electron-squirrel-startup": "1.0.0",
+    "hapijs-status-monitor": "1.0.1",
+    "react": "16.12.0",
+    "react-dom": "16.12.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "6.0.0-beta.47",
+    "@electron-forge/maker-deb": "6.0.0-beta.47",
+    "@electron-forge/maker-rpm": "6.0.0-beta.47",
+    "@electron-forge/maker-squirrel": "6.0.0-beta.47",
+    "@electron-forge/maker-zip": "6.0.0-beta.47",
+    "@electron-forge/plugin-webpack": "6.0.0-beta.47",
+    "@marshallofsound/webpack-asset-relocator-loader": "0.5.0",
+    "@types/hapi__hapi": "18.2.6",
+    "@types/node": "12.12.22",
+    "@types/react": "16.9.17",
+    "@types/react-dom": "16.9.4",
+    "@typescript-eslint/eslint-plugin": "2.13.0",
+    "@typescript-eslint/parser": "2.13.0",
+    "css-loader": "3.4.0",
+    "electron": "7.1.7",
+    "eslint": "6.8.0",
+    "eslint-config-prettier": "6.9.0",
+    "eslint-plugin-prettier": "3.1.2",
+    "eslint-plugin-react": "7.17.0",
+    "fork-ts-checker-webpack-plugin": "3.1.1",
+    "node-loader": "0.6.0",
+    "prettier": "1.19.1",
+    "style-loader": "1.1.2",
+    "ts-loader": "6.2.1",
+    "typescript": "3.7.4",
+    "webpack-merge": "4.2.2",
+    "webpack-node-externals": "1.7.2"
+  },
+  "resolutions": {
+    "@types/react": "16.9.17"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "nd_app"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ],
+      "plugins": [
+        [
+          "@electron-forge/plugin-webpack",
+          {
+            "mainConfig": "./configs/webpack/webpack.config.main.js",
+            "renderer": {
+              "config": "./configs/webpack/webpack.config.renderer.js",
+              "entryPoints": [
+                {
+                  "html": "./src/frontend/index.html",
+                  "js": "./src/frontend/App.tsx",
+                  "name": "main_window"
+                }
+              ]
+            }
+          }
+        ]
+      ]
+    }
+  }
+}

@@ -1,4 +1,6 @@
 import { app, BrowserWindow } from "electron";
+import Logger from "@kk/logger";
+
 // import express from "express";
 
 import Hapi from "@hapi/hapi";
@@ -15,12 +17,23 @@ if (require("electron-squirrel-startup")) {
 // server.get("/", (_req, res) => res.send("hello, world"));
 // server.listen(12345, () => console.log("start server"));
 
+const logger = new Logger();
+logger.info();
+
 const server = new Hapi.Server({
   host: "localhost",
-  port: 12345,
+  port: 1234,
 });
 
 server.start();
+
+server.route({
+  method: "GET",
+  path: "/",
+  handler: () => {
+    return Logger;
+  },
+});
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -37,7 +50,7 @@ const createWindow = (): void => {
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 
   // Emitted when the window is closed.
   mainWindow.on("closed", () => {
