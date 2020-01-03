@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@hapi/hapi": "18.4.0",
-    "@hapi/joi": "15.1.1",
+    "@hapi/joi": "16.1.8",
     "@kk/logger": "0.1.0",
     "electron-squirrel-startup": "1.0.0",
     "hapijs-status-monitor": "1.0.1",
