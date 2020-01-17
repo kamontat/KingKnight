@@ -17,6 +17,6 @@
     "winston": "3.2.1"
   },
   "devDependencies": {
-    "typescript": "3.7.4"
+    "typescript": "3.7.5"
   }
 }

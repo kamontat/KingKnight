@@ -24,7 +24,7 @@
     "eslint-plugin-react": "7.18.0",
     "lerna": "3.20.2",
     "prettier": "1.19.1",
-    "typescript": "3.7.4"
+    "typescript": "3.7.5"
   },
   "resolutions": {
     "@types/react": "16.9.17"
