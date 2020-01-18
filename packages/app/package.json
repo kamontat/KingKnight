@@ -16,7 +16,7 @@
     "email": "developer@kamontat.net"
   },
   "dependencies": {
-    "@hapi/hapi": "18.4.0",
+    "@hapi/hapi": "19.0.5",
     "@hapi/joi": "15.1.1",
     "@kk/logger": "0.1.0",
     "electron-squirrel-startup": "1.0.0",
